@@ -60,8 +60,15 @@ class Company:
     def list_Employee(self):
         for employee in self.Employee_list:
             print(employee)
-
         print()
+
+    #按员工编号查找员工信息
+    def search_id(self,id):
+        for employee in self.Employee_list:
+            if employee.id==id:
+                print(employee)
+                return
+        print("未找到该员工")
 
     #需要发放的奖金总额
     def need_bonus(self):
