@@ -66,9 +66,9 @@ class Company:
     def search_id(self,id):
         for employee in self.Employee_list:
             if employee.id==id:
-                print(employee)
-                return
-        print("未找到该员工")
+                return employee
+            
+        return None
 
     #需要发放的奖金总额
     def need_bonus(self):

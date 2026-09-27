@@ -52,6 +52,14 @@ class Company:
             if name.id==id: 
                 self.Employee_list.remove(name) 
                 break
+
+    #按员工编号查找员工信息
+        def search_id(self,id):
+            for employee in self.Employee_list:
+                if employee.id==id:
+                    return employee
+                
+            return None
         
     #查看所有员工
     def list_Employee(self):
